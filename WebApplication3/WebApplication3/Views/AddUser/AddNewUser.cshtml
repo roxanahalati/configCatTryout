@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddNewUser</title>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script>
+        function buttonAddClick(){
+
+                var name = $("#name").val();
+                var username = $("#username").val();
+                var role = $("#role").val();
+                var age = $("#role").val();
+                var email = $("#email").val();
+                console.log(name);
+                if (name != '' && username != '' && role != '' && age != '' && email !='') {
+                    $.get("/AddUser/SaveUser", {name : $("#name").val() , username: $("#username").val() , role: $("#role").val(), age: $("#age").val(), email: $("#email").val()},
+                                function(data,status) {
+                                    $("#maindiv").html("Successfully added");
+                    
+                })
+                
+            }
+            }
+
+
+         $(document).ready(function () {
+              $('#addButton').click(buttonAddClick);
+                        
+          });
+        </script>
+</head>
+<body>
+    <div> 
+            Name : <input type="text" id="name" name="name" /> <br />
+            Username : <input type="text" id="username" name="username" /> <br />
+            Role : <input type="text" id="role" name="role" /> <br />
+            Age : <input type="number" id="age" name="age" /> <br />
+            Email : <input type="text" id="email" name="email" /> <br />
+            <input type="submit" id="addButton" value="Add user" />
+            <div id="maindiv"></div><br />
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿@{
+                Layout = null;
+            }
+
+            <!DOCTYPE html>
+
+            <html>
+            <head>
+                <meta name="viewport" content="width=device-width" />
+                <title>MainPage</title>
+                <script src="~/lib/jquery/dist/jquery.js"></script>
+                <style type="text/css"> 
+                    .buton {
+                      
+                      border-color: white;
+                      padding: 15px 32px;
+                      text-align: center;
+                      text-decoration: none;
+                      display: inline-block;
+                      background-color: #6495ED;
+                      color: white;
+                      font-size: 18px;
+
+                    }
+                </style>
+                <script>
+                  
+              
+                    function buttonAddClick() {
+                     location.href = "/AddUser";
+                     }
+
+
+                     function buttonFilterClick() {
+                     location.href = "/Filter";
+                     }
+
+
+                     
+                    $(document).ready(function () {
+                         $('#add').click(buttonAddClick);
+                         $('#view').click(buttonFilterClick);
+                        });
+                </script>
+            </head>
+            <body>
+               <h3> Welcome to the users management system </h3>
+               <p>
+                   The application uses a feature flag to switch between UIs, based on gender.
+                   This is to show how easy it is to change the way the application looks based on the user that interacts with it.
+                   Of course, in real life, we would want more detailed targeting, based on factors that influence greater than gender does, such as their geo position, maybe the devices they are used to interact with
+                   (think how different the placement of X icon is on Mac and Windows) and other criteria.
+                   <h5>This was kinda fun :) </h5>
+                   <button id="add" class="buton" type="button">Add User</button>
+                   <button id="view" class="buton" type="button">View and Filter User</button>
+
+</body>
+            </html>

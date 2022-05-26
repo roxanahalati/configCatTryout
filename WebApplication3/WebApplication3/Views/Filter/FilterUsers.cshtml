@@ -1,0 +1,29 @@
+﻿@{
+                Layout = null;
+            }
+
+            <!DOCTYPE html>
+
+            <html>
+            <head>
+                <meta name="viewport" content="width=device-width" />
+                <title>FilterUsers</title>
+                <script src="~/lib/jquery/dist/jquery.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        $("#button").click(function() {
+                            $.get("/Filter/GetUsersByRole", {role : $("#role").val()},
+                                function(data,status) {
+                                    $("#maindiv").html(data);
+                            });
+                        });
+                    });
+                </script>
+            </head>
+            <body>
+                Role: <input type="text" id="role" /><br />
+                <input id="button" type="button" value="get users" />
+                All users of this role:
+                <div id="maindiv"></div><br />
+            </body>
+            </html>
