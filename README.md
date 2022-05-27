@@ -5,9 +5,10 @@ Basically, once in the application you can view/filter or add users.
 
 Running:
 
-- Open the source code in Visual Studio Code and run the application.
+- Clone repository.
+- Open the source code project in Visual Studio and run the application.
 - The application opens in a new browser tab.
-- Since the database is offline, it won't actually display much, but you can navigate through its pages.
+- Since the database is offline, it won't actually display or add the users, but you can navigate through its pages.
 
 I used a feature flag for changing the UI of the application. The idea would be that men and women have different UIs or that you can simply change the UI based 
 on the value of the feature flag. At the moment, there is a "pretty" pink UI and a simple grey one.
