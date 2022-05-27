@@ -1,7 +1,7 @@
 # configCatTryout
 
-The application is a mock-up web application for a user management system, where the admin can add new users, view users and filter users (in the future also delete and update).
-Basically, once in the application you can view/filter or add users.
+The application is a mock-up web application for a user management system, where the admin can add new users, view users and filter users (in the future also delete and update). When done, it will be used by school admins to manage the users that can access the faculty's resources.
+Basically, at the moment, once in the application you can view/filter or add users.
 
 Running:
 
